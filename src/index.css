@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Default Theme Light Values */
+  --app-bg: #f8fafc;
+  --app-card: #ffffff;
+  --app-widget: #f1f5f9;
+  --app-text: #0f172a;
+  --app-muted: #64748b;
+  --app-border: #e2e8f0;
+  --app-brand: #4f46e5;
+  --app-brand-hover: #4338ca;
+}
+
+.dark {
+  /* Default Theme Dark Values */
+  --app-bg: #0a0a16;
+  --app-card: #111126;
+  --app-widget: #161632;
+  --app-text: #f1f5f9;
+  --app-muted: #94a3b8;
+  --app-border: rgba(255, 255, 255, 0.08);
+  --app-brand: #6366f1;
+  --app-brand-hover: #4f46e5;
+}
+
+/* Cosmic Theme (Purple) */
+.theme-cosmic {
+  --app-bg: #f5f3ff;
+  --app-card: #ffffff;
+  --app-widget: #ede9fe;
+  --app-text: #3b0764;
+  --app-muted: #6d28d9;
+  --app-border: #ddd6fe;
+  --app-brand: #8b5cf6;
+  --app-brand-hover: #7c3aed;
+}
+.dark.theme-cosmic, .dark .theme-cosmic {
+  --app-bg: #090514;
+  --app-card: #120b24;
+  --app-widget: #1a1033;
+  --app-text: #f3e8ff;
+  --app-muted: #c084fc;
+  --app-border: rgba(139, 92, 246, 0.15);
+  --app-brand: #a78bfa;
+  --app-brand-hover: #c084fc;
+}
+
+/* Emerald Theme (Green) */
+.theme-emerald {
+  --app-bg: #f0fdf4;
+  --app-card: #ffffff;
+  --app-widget: #dcfce7;
+  --app-text: #064e3b;
+  --app-muted: #047857;
+  --app-border: #bbf7d0;
+  --app-brand: #10b981;
+  --app-brand-hover: #059669;
+}
+.dark.theme-emerald, .dark .theme-emerald {
+  --app-bg: #030c06;
+  --app-card: #081a0e;
+  --app-widget: #0c2b16;
+  --app-text: #ecfdf5;
+  --app-muted: #6ee7b7;
+  --app-border: rgba(16, 185, 129, 0.15);
+  --app-brand: #34d399;
+  --app-brand-hover: #6ee7b7;
+}
+
+/* Retro Amber Theme (Amber/Orange) */
+.theme-amber {
+  --app-bg: #fffbeb;
+  --app-card: #ffffff;
+  --app-widget: #fef3c7;
+  --app-text: #78350f;
+  --app-muted: #b45309;
+  --app-border: #fde68a;
+  --app-brand: #d97706;
+  --app-brand-hover: #b45309;
+}
+.dark.theme-amber, .dark .theme-amber {
+  --app-bg: #0f0a05;
+  --app-card: #1a110a;
+  --app-widget: #26190f;
+  --app-text: #fef3c7;
+  --app-muted: #fbbf24;
+  --app-border: rgba(245, 158, 11, 0.15);
+  --app-brand: #fbbf24;
+  --app-brand-hover: #fcd34d;
+}
+
+/* Rose Blossom Theme (Pink) */
+.theme-rose {
+  --app-bg: #fff1f2;
+  --app-card: #ffffff;
+  --app-widget: #ffe4e6;
+  --app-text: #881337;
+  --app-muted: #be123c;
+  --app-border: #fecdd3;
+  --app-brand: #db2777;
+  --app-brand-hover: #be123c;
+}
+.dark.theme-rose, .dark .theme-rose {
+  --app-bg: #100105;
+  --app-card: #1a050d;
+  --app-widget: #2a0c16;
+  --app-text: #ffe4e6;
+  --app-muted: #fda4af;
+  --app-border: rgba(236, 72, 153, 0.15);
+  --app-brand: #f43f5e;
+  --app-brand-hover: #fda4af;
+}
+
+/* Ocean Pacific Theme (Blue) */
+.theme-ocean {
+  --app-bg: #f0f9ff;
+  --app-card: #ffffff;
+  --app-widget: #e0f2fe;
+  --app-text: #0c4a6e;
+  --app-muted: #0369a1;
+  --app-border: #bae6fd;
+  --app-brand: #0284c7;
+  --app-brand-hover: #0369a1;
+}
+.dark.theme-ocean, .dark .theme-ocean {
+  --app-bg: #010710;
+  --app-card: #031326;
+  --app-widget: #051d38;
+  --app-text: #f0f9ff;
+  --app-muted: #38bdf8;
+  --app-border: rgba(14, 165, 233, 0.15);
+  --app-brand: #38bdf8;
+  --app-brand-hover: #7dd3fc;
+}
+
+@theme {
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-slate-850: var(--app-widget); /* Backwards compatibility */
+  
+  --color-app-bg: var(--app-bg);
+  --color-app-card: var(--app-card);
+  --color-app-widget: var(--app-widget);
+  --color-app-text: var(--app-text);
+  --color-app-muted: var(--app-muted);
+  --color-app-border: var(--app-border);
+  --color-app-brand: var(--app-brand);
+  --color-app-brand-hover: var(--app-brand-hover);
+}
+
+/* Custom scrollbars for pristine visual alignment */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Selectable highlight colors */
+::selection {
+  background-color: rgba(99, 102, 241, 0.25);
+  color: inherit;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "عادت‌یار (HabitYar)",
+  "description": "اپلیکیشن پیشرفته و زیبا برای مدیریت و ردیابی عادات روزانه به همراه چالش‌های انگیزشی ۲۱ روزه و قابلیت تغییر قالب‌های رنگی جذاب",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
